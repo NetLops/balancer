@@ -1,0 +1,16 @@
+domain: netlops.com
+layout:
+- go.kubebuilder.io/v3
+projectName: balancer
+repo: github.com/netlops/balancer
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: netlops.com
+  group: exposer
+  kind: Balancer
+  path: github.com/netlops/balancer/api/v1alpha1
+  version: v1alpha1
+version: "3"

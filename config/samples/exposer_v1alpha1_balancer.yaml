@@ -1,0 +1,12 @@
+apiVersion: exposer.netlops.com/v1alpha1
+kind: Balancer
+metadata:
+  labels:
+    app.kubernetes.io/name: balancer
+    app.kubernetes.io/instance: balancer-sample
+    app.kubernetes.io/part-of: balancer
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: balancer
+  name: balancer-sample
+spec:
+  # TODO(user): Add fields here
