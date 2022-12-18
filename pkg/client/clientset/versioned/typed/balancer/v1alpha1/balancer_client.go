@@ -20,7 +20,7 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "github.com/netlops/balancer/pkg/apis/balancer/v1alpha1"
+	v1alpha1 "github.com/netlops/balancer/api/v1alpha1"
 	"github.com/netlops/balancer/pkg/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
@@ -84,7 +84,7 @@ func New(c rest.Interface) *BalancerV1alpha1Client {
 }
 
 func setConfigDefaults(config *rest.Config) error {
-	gv := v1alpha1.SchemeGroupVersion
+	gv := v1alpha1.GroupVersion
 	config.GroupVersion = &gv
 	config.APIPath = "/apis"
 	config.NegotiatedSerializer = scheme.Codecs.WithoutConversion()
