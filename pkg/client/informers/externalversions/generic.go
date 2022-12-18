@@ -20,7 +20,7 @@ package externalversions
 import (
 	"fmt"
 
-	v1alpha1 "github.com/netlops/balancer/pkg/apis/balancer/v1alpha1"
+	v1alpha1 "github.com/netlops/balancer/api/v1alpha1"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
 )
@@ -52,7 +52,7 @@ func (f *genericInformer) Lister() cache.GenericLister {
 func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource) (GenericInformer, error) {
 	switch resource {
 	// Group=balancer, Version=v1alpha1
-	case v1alpha1.SchemeGroupVersion.WithResource("balancers"):
+	case v1alpha1.GroupVersion.WithResource("balancers"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Balancer().V1alpha1().Balancers().Informer()}, nil
 
 	}

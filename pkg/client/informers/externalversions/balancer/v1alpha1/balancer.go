@@ -21,7 +21,7 @@ import (
 	"context"
 	time "time"
 
-	balancerv1alpha1 "github.com/netlops/balancer/pkg/apis/balancer/v1alpha1"
+	balancerv1alpha1 "github.com/netlops/balancer/api/v1alpha1"
 	versioned "github.com/netlops/balancer/pkg/client/clientset/versioned"
 	internalinterfaces "github.com/netlops/balancer/pkg/client/informers/externalversions/internalinterfaces"
 	v1alpha1 "github.com/netlops/balancer/pkg/client/listers/balancer/v1alpha1"
